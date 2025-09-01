@@ -1,30 +1,31 @@
-import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
-import { login } from '../store/actions/authActions';
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { login } from "../store/actions/authActions";
+import { signUpWithGoogle } from "../middleware/GoogleLogin";
 
 const Login = () => {
   const [credentials, setCredentials] = useState({
-    username: '',
-    password: ''
+    username: "",
+    password: "",
   });
-  
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { loading, error } = useSelector(state => state.auth);
+  const { loading, error } = useSelector((state) => state.auth);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setCredentials(prev => ({
+    setCredentials((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(login(credentials)).then(() => {
-      navigate('/products');
+      navigate("/products");
     });
   };
 
@@ -43,7 +44,7 @@ const Login = () => {
                     {error}
                   </div>
                 )}
-                
+
                 <div className="mb-3">
                   <label htmlFor="username" className="form-label">
                     Username
@@ -75,26 +76,48 @@ const Login = () => {
                 </div>
 
                 <div className="d-grid">
-                  <button 
-                    type="submit" 
+                  <button
+                    type="submit"
                     className="btn btn-primary"
                     disabled={loading}
                   >
                     {loading ? (
                       <>
-                        <span className="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>
+                        <span
+                          className="spinner-border spinner-border-sm me-2"
+                          role="status"
+                          aria-hidden="true"
+                        ></span>
                         Logging in...
                       </>
                     ) : (
-                      'Login'
+                      "Login"
                     )}
                   </button>
                 </div>
+
+                <div className="d-grid">
+                  <button
+                    type="button"
+                    className="btn btn-outline-danger d-flex align-items-center justify-content-center"
+                    onClick={()=>signUpWithGoogle(navigate)}
+                  >
+                    <img
+                      src="https://www.svgrepo.com/show/475656/google-color.svg"
+                      alt="Google"
+                      width="20"
+                      height="20"
+                      className="me-2"
+                    />
+                    Login with Google
+                  </button>
+                </div>
               </form>
-              
+
               <div className="mt-3 text-center">
                 <small className="text-muted">
-                  Demo credentials: username: <strong>admin</strong>, password: <strong>password</strong>
+                  Demo credentials: username: <strong>admin</strong>, password:{" "}
+                  <strong>password</strong>
                 </small>
               </div>
             </div>
