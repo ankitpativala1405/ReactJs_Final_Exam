@@ -1,0 +1,52 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "iPhone 15 Pro",
+      "price": 999,
+      "image": "https://images.unsplash.com/photo-1592750475338-74b7b21085ab?w=300&h=300&fit=crop",
+      "category": "Electronics",
+      "description": "Latest iPhone with advanced camera system and A17 Pro chip"
+    },
+    {
+      "id": "2",
+      "title": "MacBook Air M2",
+      "price": 1199,
+      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=300&h=300&fit=crop",
+      "category": "Electronics",
+      "description": "Ultra-thin laptop with M2 chip and all-day battery life"
+    },
+    {
+      "id": "3",
+      "title": "Nike Air Max 270",
+      "price": 150,
+      "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=300&h=300&fit=crop",
+      "category": "Fashion",
+      "description": "Comfortable running shoes with Max Air cushioning"
+    },
+    {
+      "id": "4",
+      "title": "Samsung Galaxy S24",
+      "price": 799,
+      "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=300&h=300&fit=crop",
+      "category": "Electronics",
+      "description": "Premium Android smartphone with AI-powered features"
+    },
+    {
+      "title": "Adidas Ultraboost 22",
+      "price": 180,
+      "image": "https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=300&h=300&fit=crop",
+      "category": "Sports",
+      "description": "High-performance running shoes with Boost technology",
+      "id": "5"
+    },
+    {
+      "title": "Wireless Headphones",
+      "price": "660",
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8cHJvZHVjdHxlbnwwfHwwfHx8MA%3D%3D",
+      "category": "Electronics",
+      "description": " Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti porro saepe ab nisi sequi doloremque amet aut inventore ducimus facere!",
+      "id": "f651"
+    }
+  ]
+}
